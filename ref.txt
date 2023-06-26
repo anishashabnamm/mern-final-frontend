@@ -1,0 +1,21 @@
+The error message you provided suggests that you are trying to access the toFixed method on an undefined value.
+
+This error typically occurs when you try to call a method or access a property on a variable that has not been assigned a value or is undefined. The toFixed method is used to format a number with a fixed number of decimal places.
+
+To resolve this issue, you need to ensure that the variable you are trying to access the toFixed method on is defined and has a valid value. Here are a few steps you can take to troubleshoot and fix the problem:
+
+Check the variable: Verify that the variable you are trying to use toFixed on is defined and assigned a value. Make sure the variable is not null or undefined before accessing its properties or methods.
+
+Debug the code: If the variable should have a value but is still undefined, you might need to debug your code. Look for any statements or conditions that should assign a value to the variable and ensure they are executing as expected.
+
+Verify the data type: Ensure that the variable you are working with is actually a number or a numeric value. If it is not a number, the toFixed method will not be available. You can use the typeof operator to check the data type of the variable.
+
+Wrap in a condition: If you're unsure whether the variable will always have a value, you can add a condition to check for its existence before calling the toFixed method. For example:
+
+javascript
+Copy code
+if (myVariable !== undefined) {
+  var formattedValue = myVariable.toFixed(2);
+  // Use the formattedValue variable in your code
+}
+By implementing these steps, you should be able to resolve the "Cannot read properties of undefined (reading 'toFixed')" error.
